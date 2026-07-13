@@ -449,7 +449,7 @@ export default function Home() {
         {/* Left Input Column */}
         <div className="lg:col-span-2 space-y-6">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl font-extrabold text-orange-600 tracking-tight">🧑‍🍳 AI Fridge Raid</h1>
+            <h1 className="text-4xl font-extrabold text-orange-600 tracking-tight">🧑‍🍳 Fridge Raid</h1>
             <p className="mt-2 text-gray-500">Transform scattered ingredients into delicious personalized meals instantly.</p>
           </div>
 
