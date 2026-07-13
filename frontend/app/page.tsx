@@ -264,7 +264,7 @@ export default function Home() {
     setActiveSubstitutions({});
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
+      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/generate';
       const response = await fetch(`${BACKEND_URL}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -295,7 +295,7 @@ export default function Home() {
     setSubLoadingIndex(index);
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
+      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/substitute';
       const response = await fetch(`${BACKEND_URL}/api/substitute`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -342,7 +342,7 @@ export default function Home() {
     setRecipe(null);
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
+      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/generate';
       const response = await fetch(`${BACKEND_URL}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
