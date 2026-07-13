@@ -585,7 +585,7 @@ export default function Home() {
             </div>
 
             {/* Serving Incrementor */}
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100">
+            {/* <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100">
               <div>
                 <span className="block text-sm font-semibold text-gray-800">Target Recipe Servings</span>
                 <span className="text-xs text-gray-500">AI scales weights and calculates specific nutrition parameters.</span>
@@ -601,7 +601,37 @@ export default function Home() {
                   className="px-3 py-1.5 bg-gray-50 hover:bg-gray-100 text-gray-600 font-extrabold border-l transition-all"
                 >+</button>
               </div>
+            </div> */}
+            {/* Target Recipe Servings - Responsive Fix */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100 gap-4">
+              <div className="flex-1">
+                <span className="block text-sm font-bold text-gray-800">Target Recipe Servings</span>
+                <span className="text-xs text-gray-500">AI scales weights and nutrition parameters automatically.</span>
+              </div>
+              
+              <div className="flex items-center bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm w-full sm:w-auto h-12">
+                <button
+                  type="button"
+                  onClick={() => changeServingsAndRegen(Math.max(1, servings - 1))}
+                  className="px-6 py-2 bg-gray-50 hover:bg-gray-100 text-gray-600 font-extrabold border-r transition-all h-full"
+                >-</button>
+                
+                <span className="px-6 font-bold text-gray-800 text-sm flex-1 text-center whitespace-nowrap">
+                  {servings} Servings
+                </span>
+                
+                <button
+                  type="button"
+                  onClick={() => changeServingsAndRegen(servings + 1)}
+                  className="px-6 py-2 bg-gray-50 hover:bg-gray-100 text-gray-600 font-extrabold border-l transition-all h-full"
+                >+</button>
+              </div>
             </div>
+
+
+            
+            
+
 
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100">
               <div>
