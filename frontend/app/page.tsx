@@ -264,8 +264,7 @@ export default function Home() {
     setActiveSubstitutions({});
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/generate';
-      const response = await fetch(`${BACKEND_URL}/api/generate`, {
+      const response = await fetch('https://recipe-generator-backend-d1lh.onrender.com/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -295,8 +294,7 @@ export default function Home() {
     setSubLoadingIndex(index);
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/substitute';
-      const response = await fetch(`${BACKEND_URL}/api/substitute`, {
+      const response = await fetch('https://recipe-generator-backend-d1lh.onrender.com/api/substitute', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -342,8 +340,7 @@ export default function Home() {
     setRecipe(null);
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://recipe-generator-backend-d1lh.onrender.com/api/generate';
-      const response = await fetch(`${BACKEND_URL}/api/generate`, {
+      const response = await fetch('https://recipe-generator-backend-d1lh.onrender.com/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
