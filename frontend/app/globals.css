@@ -8,3 +8,7 @@
     color: #111827; /* gray-900 */
   }
 }
+
+@theme {
+  --font-sans: var(--font-nunito-sans);
+}
