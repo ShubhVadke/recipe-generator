@@ -467,7 +467,8 @@ export default function Home() {
                   {isListening ? '🛑 Listening...' : '🎤 Talk to Fridge'}
                 </button>
               </div>
-
+            {/* new add */}
+            <div className="flex flex-col gap-2"> 
               <div className="flex flex-wrap gap-2 p-2 border border-gray-200 rounded-xl bg-gray-50 focus-within:ring-2 focus-within:ring-orange-500 transition-all">
                 {ingredients.map((ing, index) => (
                   <span key={index} className="inline-flex items-center gap-1 bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full capitalize">
@@ -479,13 +480,36 @@ export default function Home() {
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  placeholder={ingredients.length === 0 ? "e.g., chicken, onions, rice" : ""}
-                  className="flex-1 bg-transparent border-none outline-none text-sm p-1 min-w-[120px]"
+                  onKeyDown={(e) => {
+                   if (e.key === 'Enter') {
+                     e.preventDefault();
+                     const val = inputValue.trim().toLowerCase();
+                     if (val && !ingredients.includes(val)) {
+                       setIngredients([...ingredients, val]);
+                       setInputValue('');
+                      }
+                   }
+                }}
+                placeholder="Add item..."
+                className="flex-1 bg-transparent border-none outline-none text-sm p-1 min-w-[120px]"
                 />
-              </div>
             </div>
-
+              {/* ADD BUTTON FOR MOBILE RELIABILITY */}
+              <button
+                type="button"
+                onClick={() => {
+                  const val = inputValue.trim().toLowerCase();
+                  if (val && !ingredients.includes(val)) {
+                    setIngredients([...ingredients, val]);
+                    setInputValue('');
+                  }
+                }}
+                className="w-full sm:hidden bg-orange-500 text-white py-2 rounded-xl font-bold text-sm"
+              >
+                + Add Ingredient
+              </button>
+            </div>
+          </div>
             {/* Standard Filters */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
