@@ -666,10 +666,11 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-500 font-semibold items-center">
                     <span>⏱️ Prep: {recipe.prepTime}</span>
                     <span>🍳 Cook: {recipe.cookTime}</span>
-                    <span className="bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-md text-xs border border-orange-100 font-bold">🍽️ {servings} Servings ({cuisine} mode)</span>
+                    <span className="bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-md text-xs border border-orange-100 font-bold">{servings} Servings ({cuisine} mode)</span>
                   </div>
                 </div>
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2"> */}
+                <div className="flex gap-2 w-full md:w-auto shrink-0 mt-4 md:mt-0">
                   <button
                     onClick={() => {
                       setCurrentStepIndex(0);
@@ -677,15 +678,16 @@ export default function Home() {
                       setIsCookingMode(true);
                       startLockScreenEngine();
                     }}
-                    className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-xs transition-all flex items-center gap-1.5"
+                    className="flex-1 md:flex-none justify-center px-4 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center gap-1.5"
+                    {/* className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-xs transition-all flex items-center gap-1.5" */}
                   >
-                    🚀 Start Cooking Mode
+                    Enter Cooking Mode
                   </button>
                   <button
                     onClick={() => toggleSaveRecipe(recipe)}
-                    className="p-2 rounded-xl bg-orange-50 hover:bg-orange-100 transition-all text-xl border"
+                    className="p-2 rounded-xl bg-orange-50 hover:bg-orange-100 transition-all text-xl border flex items-center justify-center shrink-0"
                   >
-                    {savedRecipes.some(r => r.title === recipe.title) ? '⭐' : '☆'}
+                    {savedRecipes.some(r => r.title === recipe.title) ? '★' : '☆'}
                   </button>
                 </div>
               </div>
