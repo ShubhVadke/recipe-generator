@@ -864,7 +864,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </div>
 
 
             {/* Countdown Timer */}
@@ -900,7 +899,9 @@ export default function Home() {
             )}
           </div>
 
-          {/* Action Footer */}
+
+      
+
           <div className="flex justify-between max-w-4xl mx-auto w-full border-t pt-6">
             <button
               onClick={() => setCurrentStepIndex(prev => Math.max(prev - 1, 0))}
