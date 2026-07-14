@@ -669,8 +669,8 @@ export default function Home() {
                     <span className="bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-md text-xs border border-orange-100 font-bold">{servings} Servings ({cuisine} mode)</span>
                   </div>
                 </div>
-                {/* <div className="flex gap-2"> */}
-                <div className="flex gap-2 w-full md:w-auto shrink-0 mt-4 md:mt-0">
+                <div className="flex gap-2">
+                {/* <div className="flex gap-2 w-full md:w-auto shrink-0 mt-4 md:mt-0"> */}
                   <button
                     onClick={() => {
                       setCurrentStepIndex(0);
