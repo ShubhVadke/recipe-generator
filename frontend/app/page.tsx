@@ -678,8 +678,8 @@ export default function Home() {
                       setIsCookingMode(true);
                       startLockScreenEngine();
                     }}
-                    className="flex-1 md:flex-none justify-center px-4 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center gap-1.5"
-                    /* {className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-xs transition-all flex items-center gap-1.5" } */
+                    /* {/* className="flex-1 md:flex-none justify-center px-4 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center gap-1.5" */
+                    className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-xs transition-all flex items-center gap-1.5"
                   >
                     Enter Cooking Mode
                   </button>
