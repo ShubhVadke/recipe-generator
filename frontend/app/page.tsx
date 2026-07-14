@@ -864,6 +864,7 @@ export default function Home() {
               </button>
             </div>
           </div>
+        </div>
 
 
             {/* Countdown Timer */}
@@ -898,7 +899,6 @@ export default function Home() {
               </div>
             )}
           </div>
-
 
       
 
