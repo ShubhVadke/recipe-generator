@@ -804,9 +804,9 @@ export default function Home() {
 
       {/* Immersive Active Cooking Mode Portal with Text-to-Speech Persona Engine */}
       {isCookingMode && recipe && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col justify-between p-6 sm:p-12 animate-fadeIn">
+        <div className="fixed inset-0 bg-white z-50 flex flex-col justify-between p-4 sm:p-8 animate-fadeIn h-[100dvh] w-full overflow-hidden">
           {/* Active Mode Header */}
-          <div className="flex justify-between items-center border-b pb-4">
+          <div className="shrink-0 flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 border-b pb-4 relative">
             <div>
               <span className="text-xs font-bold text-orange-600 uppercase tracking-widest block mb-1">
                 Cooking Mode Active • Voice: {persona}
