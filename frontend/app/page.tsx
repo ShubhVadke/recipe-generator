@@ -771,7 +771,7 @@ export default function Home() {
 
         {/* Sidebar */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4 h-fit max-h-[85vh] overflow-y-auto">
-          <h2 className="text-xl font-bold text-gray-800 border-b pb-2">★ Saved Recipes ({savedRecipes.length})</h2>
+          <h2 className="text-xl font-bold text-gray-800 border-b pb-2">⭐ Saved Recipes ({savedRecipes.length})</h2>
           {savedRecipes.length === 0 ? (
             <p className="text-sm text-gray-400 italic">No saved recipes yet.</p>
           ) : (
@@ -837,9 +837,9 @@ export default function Home() {
           </div>
 
           {/* Active Card Body */}
-          <div className="my-auto max-w-4xl mx-auto w-full space-y-6 sm:space-y-8 py-4 sm:py-6">
-            <div className="flex items-center gap-3 sm:gap-4">
-              <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-orange-600 text-white text-sm sm:text-lg font-black rounded-xl shrink-0">
+          <div className="my-auto max-w-4xl mx-auto w-full space-y-8 py-6">
+            <div className="flex items-center gap-4">
+              <span className="px-4 py-2 bg-orange-600 text-white text-lg font-black rounded-xl">
                 Step {currentStepIndex + 1} of {recipe.instructions.length}
               </span>
               <div className="h-2 flex-1 bg-gray-100 rounded-full overflow-hidden">
@@ -850,22 +850,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Responsive Text: Smaller on mobile, scales up on tablet/desktop */}
-            <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 leading-relaxed tracking-tight">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-800 leading-relaxed tracking-tight">
               {recipe.instructions[currentStepIndex]}
             </p>
 
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center">
               <button
                 onClick={() => speakCurrentStep(recipe.instructions[currentStepIndex])}
-                className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold rounded-xl border transition-all"
+                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold rounded-xl border flex items-center gap-1 transition-all"
               >
-                Repeat Audio Narration
+                🔊 Repeat Audio Narration
               </button>
             </div>
-          </div>
-        </div>
-
 
             {/* Countdown Timer */}
             {timerSeconds > 0 && (
@@ -900,8 +896,7 @@ export default function Home() {
             )}
           </div>
 
-      
-
+          {/* Action Footer */}
           <div className="flex justify-between max-w-4xl mx-auto w-full border-t pt-6">
             <button
               onClick={() => setCurrentStepIndex(prev => Math.max(prev - 1, 0))}
