@@ -837,8 +837,8 @@ export default function Home() {
           </div>
 
           {/* Active Card Body */}
-          <div className="my-auto max-w-4xl mx-auto w-full space-y-6 sm:space-y-8 py-6 am:py-6">
-            <div className="flex items-center gap-3 sm:gap-4">
+          <div className="my-auto max-w-3xl mx-auto w-full space-y-4 sm:space-y-6 py-4 am:py-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               <span className="px-3 py-1.5 sm:py-2 bg-orange-600 text-white text-sm sm:text-lg font-black rounded-xl shrink-0">
                 Step {currentStepIndex + 1} of {recipe.instructions.length}
               </span>
@@ -850,14 +850,14 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-800 leading-relaxed tracking-tight">
+            <p className="text-xl sm:text-xl lg:text-2xl font-medium text-gray-800 leading-relaxed tracking-tight">
               {recipe.instructions[currentStepIndex]}
             </p>
 
             <div className="flex justify-center pt-2">
               <button
                 onClick={() => speakCurrentStep(recipe.instructions[currentStepIndex])}
-                className="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold rounded-xl border flex items-center gap-1 transition-all"
+                className="px-2 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold rounded-xl border flex items-center gap-1 transition-all"
               >
                 🔊 Repeat Audio Narration
               </button>
@@ -868,7 +868,7 @@ export default function Home() {
               <div className="bg-orange-50 border border-orange-100 rounded-2xl p-6 max-w-md mx-auto shadow-sm flex flex-col items-center space-y-4">
                 <div className="text-center">
                   <span className="text-xs font-bold text-orange-600 uppercase tracking-wider block mb-1">⏰ Step Countdown</span>
-                  <span className="text-5xl font-black font-mono text-gray-800 tracking-tight">
+                  <span className="text-3xl font-black font-mono text-gray-800 tracking-tight">
                     {formatTimerDisplay(timerSeconds)}
                   </span>
                 </div>
@@ -887,7 +887,7 @@ export default function Home() {
                       const match = currentStepText.match(/(\d+)\s*(minutes|minute|mins|min)/i);
                       if (match && match[1]) setTimerSeconds(parseInt(match[1]) * 60);
                     }}
-                    className="px-4 py-2.5 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold text-sm rounded-xl"
+                    className="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold text-sm rounded-xl"
                   >
                     🔄 Reset
                   </button>
